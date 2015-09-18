@@ -7,7 +7,7 @@
     <ProjectGuid>{62BD2591-EB48-4887-9DCD-21AA7933BAD9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>plmOS.Logging.Console</RootNamespace>
+    <RootNamespace>plmOS.Logging</RootNamespace>
     <AssemblyName>plmOS.Logging.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Target.cs" />
+    <Compile Include="Console.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

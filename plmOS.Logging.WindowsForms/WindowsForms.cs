@@ -29,9 +29,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace plmOS.Logging.WindowsForms
+namespace plmOS.Logging
 {
-    public class Target : ITarget
+    public class WindowsForms : ITarget
     {
         public TextBox TextBox { get; private set; }
 
@@ -54,7 +54,7 @@ namespace plmOS.Logging.WindowsForms
 
         }
 
-        public Target(TextBox TextBox)
+        public WindowsForms(TextBox TextBox)
         {
             this.TextBox = TextBox;
         }

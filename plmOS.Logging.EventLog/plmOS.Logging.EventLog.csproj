@@ -7,7 +7,7 @@
     <ProjectGuid>{B69EAF96-86DB-491D-821F-D72864B3EC07}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>plmOS.Logging.EventLog</RootNamespace>
+    <RootNamespace>plmOS.Logging</RootNamespace>
     <AssemblyName>plmOS.Logging.EventLog</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Target.cs" />
+    <Compile Include="EventLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

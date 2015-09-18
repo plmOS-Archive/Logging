@@ -28,9 +28,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace plmOS.Logging.Console
+namespace plmOS.Logging
 {
-    public class Target : ITarget
+    public class Console : ITarget
     {
         public void Store(Message Message)
         {
@@ -42,7 +42,7 @@ namespace plmOS.Logging.Console
 
         }
 
-        public Target()
+        public Console()
         {
 
         }

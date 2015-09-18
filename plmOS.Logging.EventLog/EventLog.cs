@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace plmOS.Logging.EventLog
+namespace plmOS.Logging
 {
-    public class Target : ITarget
+    public class EventLog : ITarget
     {
         public String Location { get; private set; }
 
@@ -44,7 +44,7 @@ namespace plmOS.Logging.EventLog
 
         }
 
-        public Target(String Location, String Source)
+        public EventLog(String Location, String Source)
         {
             this.Location = Location;
             this.Source = Source;
