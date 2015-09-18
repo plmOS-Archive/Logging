@@ -1,6 +1,6 @@
 ### plmOS Logging
 
-plmOS Logging provides .NET libraries for storing and displaying messages to various targets.
+plmOS Logging provides .NET libraries for storing log messages to various targets.
 
 Copyright (C) 2015 [Processwall Limited](http://www.processwall.com).
 
