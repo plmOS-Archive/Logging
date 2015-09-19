@@ -1,4 +1,4 @@
-﻿namespace plmOS.Logging.EventLog.CreateSource
+﻿namespace plmOS.Logging.CreateSource
 {
     partial class MainForm
     {

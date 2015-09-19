@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace plmOS.Logging.EventLog.CreateSource
+namespace plmOS.Logging.CreateSource
 {
     public partial class MainForm : Form
     {
@@ -19,7 +19,7 @@ namespace plmOS.Logging.EventLog.CreateSource
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            Target target = new Target(this.locationTextBox.Text, this.sourceTextBox.Text);
+            plmOS.Logging.EventLog target = new plmOS.Logging.EventLog(this.locationTextBox.Text, this.sourceTextBox.Text);
 
             try
             {
