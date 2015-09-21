@@ -28,7 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace plmOS
+namespace plmOS.Logging
 {
     public class Message
     {

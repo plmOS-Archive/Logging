@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace plmOS.Logging.CreateSource
+namespace plmOS.Logging.EventLog.CreateSource
 {
     static class Program
     {

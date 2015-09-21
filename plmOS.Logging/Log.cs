@@ -30,15 +30,13 @@ using System.Threading.Tasks;
 using System.Collections.Concurrent;
 using System.Threading;
 
-namespace plmOS
+namespace plmOS.Logging
 {
-    public class Log : IDisposable
+    public abstract class Log : IDisposable
     {
         private const int delay = 100;
 
         public enum Levels { FAT = 0, ERR = 1, WAR = 2, INF = 3, DEB = 4 };
-
-        public ITarget Target { get; private set; }
 
         public Levels Level { get; set; }
 
@@ -51,6 +49,8 @@ namespace plmOS
             }
         }
 
+        protected abstract void Store(Message Message);
+
         private Thread Worker;
 
         private ConcurrentQueue<Message> Messages;
@@ -61,40 +61,33 @@ namespace plmOS
             {
                 Message message = null;
 
-                while(this.Messages.TryDequeue(out message))
+                while (this.Messages.TryDequeue(out message))
                 {
-                    if (this.Target != null)
-                    {
-                        this.Target.Store(message);
-                    }
+                    this.Store(message);
                 }
 
                 Thread.Sleep(delay);
             }
         }
         
-        public void Dispose()
+        public virtual void Dispose()
         {
             // Stop Workder
             if (this.Worker != null)
             {
                 this.Worker.Abort();
             }
-
-            // Dispose Target
-            if (this.Target != null)
-            {
-                this.Target.Dispose();
-            }
         }
 
-        public Log(ITarget Target)
+        public Log()
         {
-            this.Target = Target;
-            this.Level = Levels.ERR;
+            // Default Logging to Information
+            this.Level = Levels.INF;
 
+            // Create Message Queue
             this.Messages = new ConcurrentQueue<Message>();
 
+            // Start Background Worker
             this.Worker = new Thread(this.ProcessQueue);
             this.Worker.IsBackground = true;
             this.Worker.Start();

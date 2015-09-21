@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace plmOS.Logging.Properties {
+namespace plmOS.Logging.EventLog.CreateSource.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

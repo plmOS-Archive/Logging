@@ -30,16 +30,11 @@ using System.Threading.Tasks;
 
 namespace plmOS.Logging
 {
-    public class Console : ITarget
+    public class Console : Log
     {
-        public void Store(Message Message)
+        protected override void Store(Message Message)
         {
             System.Console.WriteLine(Message.Date.ToString("yyyy-MM-dd HH:mm:ss") + " " + Message.Level.ToString() + ": " + Message.Text);
-        }
-
-        public void Dispose()
-        {
-
         }
 
         public Console()

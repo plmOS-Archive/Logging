@@ -7,8 +7,8 @@
     <ProjectGuid>{B70C5CE7-3C1A-4CD8-9772-F7B94EAA4D84}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>plmOS.Logging</RootNamespace>
-    <AssemblyName>plmOS.Logging.CreateSource</AssemblyName>
+    <RootNamespace>plmOS.Logging.EventLog.CreateSource</RootNamespace>
+    <AssemblyName>plmOS.Logging.EventLog.CreateSource</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -90,16 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\plmOS.Logging.EventLog\plmOS.Logging.EventLog.csproj">
-      <Project>{b69eaf96-86db-491d-821f-d72864b3ec07}</Project>
-      <Name>plmOS.Logging.EventLog</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\plmOS.Logging\plmOS.Logging.csproj">
-      <Project>{1f7e6dab-fac1-48d2-8ef1-0f88ccd93f6f}</Project>
-      <Name>plmOS.Logging</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

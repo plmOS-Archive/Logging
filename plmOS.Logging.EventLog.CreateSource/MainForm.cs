@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace plmOS.Logging.CreateSource
+namespace plmOS.Logging.EventLog.CreateSource
 {
     public partial class MainForm : Form
     {
@@ -19,11 +19,13 @@ namespace plmOS.Logging.CreateSource
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            plmOS.Logging.EventLog target = new plmOS.Logging.EventLog(this.locationTextBox.Text, this.sourceTextBox.Text);
-
             try
             {
-                target.CreateSource();
+                if (!System.Diagnostics.EventLog.SourceExists(this.sourceTextBox.Text))
+                {
+                    System.Diagnostics.EventLog.CreateEventSource(this.sourceTextBox.Text, this.locationTextBox.Text);
+                }
+
                 MessageBox.Show("Source created", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
