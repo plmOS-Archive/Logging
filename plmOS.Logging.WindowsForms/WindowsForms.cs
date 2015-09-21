@@ -31,11 +31,11 @@ using System.Windows.Forms;
 
 namespace plmOS.Logging
 {
-    public class WindowsForms : ITarget
+    public class WindowsForms : Log
     {
         public TextBox TextBox { get; private set; }
 
-        public void Store(Message Message)
+        protected override  void Store(Message Message)
         {
             String messagestring = Message.Date.ToString("yyyy-MM-dd HH:mm:ss") + " " + Message.Level.ToString() + " " + Message.Text + Environment.NewLine;
 
@@ -47,11 +47,6 @@ namespace plmOS.Logging
             {
                 this.TextBox.AppendText(messagestring);
             }
-        }
-
-        public void Dispose()
-        {
-
         }
 
         public WindowsForms(TextBox TextBox)
